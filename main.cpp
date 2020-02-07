@@ -7,7 +7,7 @@ void structureBuilding();
 void arraysAndMatrices();
 
 int main(void){
-  cout << "Test output" << endl;
+  "cout << "Test output" << endl;"
   return 0;
 }
 
