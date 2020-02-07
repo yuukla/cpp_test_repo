@@ -9,7 +9,9 @@
 //include libraries here
 #include <stdio.h>
 #include <math.h>
-#include <iomanip.h>
+#include <iomanip>
+#include <stdlib.h>
+#include <iostream>
 
 using namespace std;
 void setTestScores (int* x, int* y){
@@ -21,17 +23,19 @@ void setTestScores (int* x, int* y){
   cin >> *y;
 }
 
-void testScoreLogic (int x, int y){
+double testScoreLogic (int x, int y){
   //find average of a batch of test testscores
-  float testAverage = x + y /2;
+  double testAverage = (x+y)/2;
+  return testAverage;
 }
 int main (void){
 
 //declare variables
 int test1, test2;
 setTestScores(&test1, &test2);
-cout << test1, test2;
-
+testScoreLogic(test1, test2);
+cout << test1 << " " << test2 << endl;
+cout << testScoreLogic(test1, test2);
 
 return 0;
 }
